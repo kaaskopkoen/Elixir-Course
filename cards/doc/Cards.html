@@ -125,6 +125,8 @@ cards
 
       </div>
 
+        <div class="summary-synopsis"><p>Determines whether a deck contains a given card</p></div>
+
     </div>
 
     <div class="summary-row">
@@ -209,7 +211,9 @@ cards
 
   <section class="docstring">
 
-
+<p>Determines whether a deck contains a given card</p><h2 id="contains?/2-examples" class="section-heading"><a href="#contains?/2-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">create_deck</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Cards</span><span class="o">.</span><span class="n">contains?</span><span class="n">deck</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ace of Spades&quot;</span><span class="w">
+</span><span class="no">true</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create_deck/0">
@@ -264,10 +268,10 @@ cards
   <section class="docstring">
 
 <p>  Divides a deck into a hand an the remainer of the deck.
-  The <code class="inline">hand_size</code> argument indicates how many cards should be in the hand.</p><h2 id="deal/2-examles" class="section-heading"><a href="#deal/2-examles" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examles</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">create_deck</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="4213473212-1">{</span><span class="n">hand</span><span class="p">,</span><span class="w"> </span><span class="n">deck</span><span class="p" data-group-id="4213473212-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">deal</span><span class="p" data-group-id="4213473212-2">(</span><span class="n">deck</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="4213473212-2">)</span><span class="w">
+  The <code class="inline">hand_size</code> argument indicates how many cards should be in the hand.</p><h2 id="deal/2-examples" class="section-heading"><a href="#deal/2-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">deck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">create_deck</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="4236429840-1">{</span><span class="n">hand</span><span class="p">,</span><span class="w"> </span><span class="n">deck</span><span class="p" data-group-id="4236429840-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Cards</span><span class="o">.</span><span class="n">deal</span><span class="p" data-group-id="4236429840-2">(</span><span class="n">deck</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="4236429840-2">)</span><span class="w">
 </span><span class="gp unselectable">iex&gt; </span><span class="n">hand</span><span class="w">
-</span><span class="p" data-group-id="4213473212-3">[</span><span class="s">&quot;?Ace of Spades&quot;</span><span class="p" data-group-id="4213473212-3">]</span></code></pre>
+</span><span class="p" data-group-id="4236429840-3">[</span><span class="s">&quot;Ace of Spades&quot;</span><span class="p" data-group-id="4236429840-3">]</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">

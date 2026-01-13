@@ -15,15 +15,24 @@ defmodule Identicon do
   end
 
   def draw_image(%Identicon.Image{color: color, pixel_map: pixel_map}) do
-    image = :egd.create(250, 250)
-    fill = :egd.color(color)
+    # PNG image initialiseren
+    image = :png.new(width: 250, height: 250, mode: {:indexed, 256})
 
-    Enum.each pixel_map, fn({start, stop}) ->
-      :egd.filledRectangle(image, start, stop, fill)
-    end
+    # Color naar PNG index
+    {r, g, b} = color
+    palette_color = <<r, g, b>>
+    :png.set_palette(image, [palette_color])
 
-    :egd.render(image)
+    # Pixels tekenen
+    Enum.each(pixel_map, fn({{x1, y1}, {x2, y2}}) ->
+      for x <- x1..(x2-1), y <- y1..(y2-1) do
+        :png.put_pixel(image, x, y, 0)  # Index 0 = jouw color
+      end
+    end)
+
+    :png.to_binary(image)
   end
+
 
   def build_pixel_map(%Identicon.Image{grid: grid} = image) do
     pixel_map = Enum.map grid, fn({_code, index}) ->

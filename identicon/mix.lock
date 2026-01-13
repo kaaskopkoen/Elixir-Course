@@ -1,3 +1,5 @@
 %{
   "egd": {:git, "https://github.com/erlang/egd.git", "1cea959544de7dd40a3284ba571a58939de57616", []},
+  "mogrify": {:hex, :mogrify, "0.9.3", "238c782f00271dace01369ad35ae2e9dd020feee3443b9299ea5ea6bed559841", [:mix], [], "hexpm", "0189b1e1de27455f2b9ae8cf88239cefd23d38de9276eb5add7159aea51731e6"},
+  "png": {:hex, :png, "0.2.1", "b25c17c8dcdc40096d46ae2d7c2777c63fede48fa8c8312cc708c88554049d3b", [:rebar3], [], "hexpm", "279345e07108c604871a21f1c91f716810ab559af2b20d6f302e0a98265ef72e"},
 }
